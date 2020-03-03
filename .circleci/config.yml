@@ -4,7 +4,7 @@ orbs:
 jobs:
   build:
     environment:
-      CC_TEST_REPORTER_ID: 18cede488ab81efbf7bad5d60d0ce7efc1625b884ceeb02c59873e30f689ba1a
+      CC_TEST_REPORTER_ID: b05844ce7799e57aab8b1a744d0fa64701218410d844420725ff4ce975dcae04
     docker:
       - image: circleci/node:10-browsers
     working_directory: ~/OaksLockOpenAPILambda
@@ -25,7 +25,7 @@ jobs:
           command: |
             ./cc-test-reporter before-build
             npm test
-            ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
+            ./cc-test-reporter after-build --coverage-input-type lcov --exit-code $?
 
   test:
     executor:
