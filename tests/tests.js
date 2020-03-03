@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken');
 
 // Creating and validating jwt token.
 describe ('Create and Validate Jwt Token', function () {
-    it ('shoud create and validate jwt token', function () {
+    it ('shod create and validate jwt token', function () {
         let user = {
             username: 'nskumar278',
             password: 'nskumar143'
