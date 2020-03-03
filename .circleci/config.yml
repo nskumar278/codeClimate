@@ -27,7 +27,7 @@ jobs:
             npm test
             ./cc-test-reporter after-build
 
-  build-and-test:
+  test:
     executor:
       name: node/default
     steps:
@@ -41,6 +41,6 @@ workflows:
     build-and-test:
       jobs:
         - build
-        - build-and-test:
+        - test:
             require:
               - build
