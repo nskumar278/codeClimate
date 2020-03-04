@@ -21,110 +21,110 @@ describe ('Create and Validate Jwt Token', function () {
 });
 
 
-// Validation of all inputs received from user.
-describe ("Validating Input Formats (Unit Tests)", function () {
-
-    // Validating Login Details Format
-    describe ('Login Format', function () {
-        it ('Correct username and password format', function () {
-            let loginDetails = {
-                username: 'nskumar278',
-                password: 'nskumar143'
-            }
-            expect (true).to.be.equal (services.validateLogin(loginDetails));
-        });
-
-        it ('Invalid username format', function () {
-            let loginDetails = {
-                username: '@3',
-                password: 'nskumar143'
-            }
-            expect (false).to.be.equal (services.validateLogin(loginDetails));
-        });
-
-        it ('Invalid password format', function () {
-            let loginDetails = {
-                username: 'nskumar278',
-                password: 'n'
-            }
-            expect (false).to.be.equal (services.validateLogin(loginDetails));
-        });
-        it ('Invalid username and password format', function () {
-            let loginDetails = {
-                username: '@',
-                password: 'n'
-            }
-            expect (false).to.be.equal (services.validateLogin(loginDetails));
-        });
-    });
-
-    // Validating Signup Details Format
-    describe ('Signup Format', function () {
-        it ('Correct format', function () {
-            let signupDetails = {
-                email: 'nskumar278@gmail.com',
-                username: 'nskumar278',
-                password: 'nskumar143'
-            }
-            expect (true).to.be.equal (services.validateSignup(signupDetails));
-        });
-
-        it ('Invalid username format', function () {
-            let signupDetails = {
-                email: 'nskumar278@gmail.com',
-                username: '@3',
-                password: 'nskumar143'
-            }
-            expect (false).to.be.equal (services.validateSignup(signupDetails));
-        });
-
-        it ('Invalid password format', function () {
-            let signupDetails = {
-                email: 'nskumar278@gmail.com',
-                username: 'nskumar278',
-                password: 'n'
-            }
-            expect (false).to.be.equal (services.validateSignup(signupDetails));
-        });
-        it ('Invalid email format', function () {
-            let signupDetails = {
-                email: 'nskumar2gmail.com',
-                username: 'nskumar278',
-                password: 'nskumar143'
-            }
-            expect (false).to.be.equal (services.validateSignup(signupDetails));
-        });
-        it ('Invalid all details', function () {
-            let signupDetails = {
-                email: 'jasdf',
-                username: '@',
-                password: 'n'
-            }
-            expect (false).to.be.equal (services.validateSignup(signupDetails));
-        });
-    });
-
-
-    // Validating Number format
-    describe ('Number Format', function () {
-        it ('Correct number format', function () {
-            let number = {
-                number: 10
-            }
-            expect (true).to.be.equal (services.validateNumber(number));
-        });
-
-        it ('Invalid number format', function () {
-            let number = {
-                number: 'asdf'
-            }
-            expect (false).to.be.equal (services.validateNumber(number));
-        });
-    });
-});
-
-
-
+// // Validation of all inputs received from user.
+// describe ("Validating Input Formats (Unit Tests)", function () {
+//
+//     // Validating Login Details Format
+//     describe ('Login Format', function () {
+//         it ('Correct username and password format', function () {
+//             let loginDetails = {
+//                 username: 'nskumar278',
+//                 password: 'nskumar143'
+//             }
+//             expect (true).to.be.equal (services.validateLogin(loginDetails));
+//         });
+//
+//         it ('Invalid username format', function () {
+//             let loginDetails = {
+//                 username: '@3',
+//                 password: 'nskumar143'
+//             }
+//             expect (false).to.be.equal (services.validateLogin(loginDetails));
+//         });
+//
+//         it ('Invalid password format', function () {
+//             let loginDetails = {
+//                 username: 'nskumar278',
+//                 password: 'n'
+//             }
+//             expect (false).to.be.equal (services.validateLogin(loginDetails));
+//         });
+//         it ('Invalid username and password format', function () {
+//             let loginDetails = {
+//                 username: '@',
+//                 password: 'n'
+//             }
+//             expect (false).to.be.equal (services.validateLogin(loginDetails));
+//         });
+//     });
+//
+//     // Validating Signup Details Format
+//     describe ('Signup Format', function () {
+//         it ('Correct format', function () {
+//             let signupDetails = {
+//                 email: 'nskumar278@gmail.com',
+//                 username: 'nskumar278',
+//                 password: 'nskumar143'
+//             }
+//             expect (true).to.be.equal (services.validateSignup(signupDetails));
+//         });
+//
+//         it ('Invalid username format', function () {
+//             let signupDetails = {
+//                 email: 'nskumar278@gmail.com',
+//                 username: '@3',
+//                 password: 'nskumar143'
+//             }
+//             expect (false).to.be.equal (services.validateSignup(signupDetails));
+//         });
+//
+//         it ('Invalid password format', function () {
+//             let signupDetails = {
+//                 email: 'nskumar278@gmail.com',
+//                 username: 'nskumar278',
+//                 password: 'n'
+//             }
+//             expect (false).to.be.equal (services.validateSignup(signupDetails));
+//         });
+//         it ('Invalid email format', function () {
+//             let signupDetails = {
+//                 email: 'nskumar2gmail.com',
+//                 username: 'nskumar278',
+//                 password: 'nskumar143'
+//             }
+//             expect (false).to.be.equal (services.validateSignup(signupDetails));
+//         });
+//         it ('Invalid all details', function () {
+//             let signupDetails = {
+//                 email: 'jasdf',
+//                 username: '@',
+//                 password: 'n'
+//             }
+//             expect (false).to.be.equal (services.validateSignup(signupDetails));
+//         });
+//     });
+//
+//
+//     // Validating Number format
+//     describe ('Number Format', function () {
+//         it ('Correct number format', function () {
+//             let number = {
+//                 number: 10
+//             }
+//             expect (true).to.be.equal (services.validateNumber(number));
+//         });
+//
+//         it ('Invalid number format', function () {
+//             let number = {
+//                 number: 'asdf'
+//             }
+//             expect (false).to.be.equal (services.validateNumber(number));
+//         });
+//     });
+// });
+//
+//
+//
 
 //
 // //==================================INTEGRATION TESTING AHEAD!!===============================
