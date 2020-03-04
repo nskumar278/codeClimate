@@ -15,7 +15,7 @@ describe ('Create and Validate Jwt Token', function () {
         };
         services.jwtTokenValidation(services.createJwtToken(user), function (result) {
             expect (result).to.be.equal (true);
-        });
+         });
 
     });
 });
