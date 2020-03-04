@@ -14,7 +14,7 @@ describe ('Create and Validate Jwt Token', function () {
             password: 'nskumar143'
         };
         services.jwtTokenValidation(services.createJwtToken(user), function (result) {
-            expect (result).to.be.equal (true);
+            expect (result).to.be.equal(true);
         });
 
     });
