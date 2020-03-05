@@ -122,7 +122,7 @@ function verifyArmstrong (req, res) {
 function logoutUser (req, res) {
     localStorage.removeItem('jwtToken');
     localStorage.removeItem('username');
-    res.statusCode (200);
+    // res.statusCode (200);
     res.redirect ('/login');
 }
 
