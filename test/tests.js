@@ -126,7 +126,7 @@ describe ("Validating Input Formats (Unit Tests)", function () {
         });
         it ('New function check', function () {
 
-            expect(200).to.be.equal (services.addNewFunction(20));
+            expect (200).to.be.equal (services.addNewFunction(20));
         });
     });
 });
