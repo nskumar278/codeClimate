@@ -79,6 +79,16 @@ function validateSentence (sentence) {
         return true;
 }
 
+
+function addNewFunction () {
+    console.log('Hello Workd');
+    if (true){
+        a = 100;
+    }else {
+        a = 200;
+    }
+}
+
 module.exports = {
     createJwtToken,
     jwtTokenValidation,
@@ -86,4 +96,5 @@ module.exports = {
     validateSignup,
     validateNumber,
     validateSentence,
+    addNewFunction
 };

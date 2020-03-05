@@ -126,18 +126,6 @@ function logoutUser (req, res) {
     res.redirect ('/login');
 }
 
-
-function addNewFunction () {
-    console.log('Hello Workd');
-    if (true){
-        a = 100;
-    }else {
-        a = 200;
-    }
-
-
-}
-
 module.exports = {
     login,
     signup,
