@@ -80,15 +80,15 @@ function validateSentence (sentence) {
 }
 
 
-// function addNewFunction (number) {
-//     if (number == 10){
-//         let a = 100;
-//         return a;
-//     }else {
-//         let a = 200;
-//         return a;
-//     }
-// }
+function addNewFunction (number) {
+    if (number == 10){
+        let a = 100;
+        return a;
+    }else {
+        let a = 200;
+        return a;
+    }
+}
 
 module.exports = {
     createJwtToken,
@@ -97,4 +97,5 @@ module.exports = {
     validateSignup,
     validateNumber,
     validateSentence,
+    addNewFunction
 };
