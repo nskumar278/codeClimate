@@ -97,5 +97,4 @@ module.exports = {
     validateSignup,
     validateNumber,
     validateSentence,
-    addNewFunction
 };
