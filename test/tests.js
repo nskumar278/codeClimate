@@ -139,8 +139,8 @@ describe ('Testing Routes', function () {
                 .send({email: 'nskumar278@gmail.com', username: 'nskumar278', password: 'nskumar143'})
                 .end(function (err, response) {
                     expect(response.statusCode).to.be.equal (200);
-                    done();
                 });
+            done();
         });
     });
 
