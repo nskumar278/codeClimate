@@ -80,12 +80,13 @@ function validateSentence (sentence) {
 }
 
 
-function addNewFunction () {
-    console.log('Hello Workd');
-    if (true){
-        a = 100;
+function addNewFunction (number) {
+    if (number == 10){
+        let a = 100;
+        return a;
     }else {
-        a = 200;
+        let a = 200;
+        return a;
     }
 }
 
