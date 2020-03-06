@@ -11,6 +11,8 @@ function login (req, res) {
     {
         model.findByPk(username)
             .then (user => {
+                console.log('Hello');
+                console.log(user)
                 if (user.password == password) {
                     localStorage.setItem('jwtToken', service.createJwtToken (req.body));
                     localStorage.setItem('username', username)
