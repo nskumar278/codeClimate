@@ -14,7 +14,7 @@ jobs:
           name: Setup dependencies
           command: |
             npm install
-            npm install sequelize-cli
+            npm install -g sequelize-cli
             sequelize db:create --env testing
             sequelize db:migrate --env testing
       - run:
