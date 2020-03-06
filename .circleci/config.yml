@@ -24,7 +24,6 @@ jobs:
           command: |
             npm install
             dockerize -wait tcp://localhost:5432 -timeout 1m
-            psql --version
       - run:
           name: Setup Code Climate test-reporter
           command: |
