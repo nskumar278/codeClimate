@@ -14,8 +14,8 @@ jobs:
           name: Setup dependencies
           command: |
             npm install
-            sequelize db:create --env testing
-            sequelize db:migrate --env testing
+            ./node_modules/.bin/sequelize-cli db:create --env testing
+            ./node_modules/.bin/sequelize-cli db:migrate --env testing
       - run:
           name: Setup Code Climate test-reporter
           command: |
