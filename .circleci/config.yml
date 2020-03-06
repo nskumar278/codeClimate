@@ -23,9 +23,7 @@ jobs:
           name: Setup dependencies
           command: |
             npm install
-#            sudo apt install postgresql postgresql-contrib
-#            sudo -u postgres psql -p 5432 -c "create user testuser with password 'nskumar143';"
-#            dockerize -wait tcp://localhost:5432 -timeout 1m
+            dockerize -wait tcp://localhost:5432 -timeout 1m
             psql --version
       - run:
           name: Setup Code Climate test-reporter
