@@ -120,14 +120,14 @@ describe ("Validating Input Formats (Unit Tests)", function () {
             }
             expect (false).to.be.equal (services.validateNumber(number));
         });
-        // it ('New function check', function () {
-        //
-        //     expect (100).to.be.equal (services.addNewFunction(10));
-        // });
-        // it ('New function check', function () {
-        //
-        //     expect (200).to.be.equal (services.addNewFunction(20));
-        // });
+        it ('New function check', function () {
+
+            expect (100).to.be.equal (services.addNewFunction(10));
+        });
+        it ('New function check', function () {
+
+            expect (200).to.be.equal (services.addNewFunction(20));
+        });
     });
 });
 

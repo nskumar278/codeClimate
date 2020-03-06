@@ -14,8 +14,6 @@ jobs:
           name: Setup dependencies
           command: |
             npm install
-            ./node_modules/.bin/sequelize-cli db:create --env testing
-            ./node_modules/.bin/sequelize-cli db:migrate --env testing
       - run:
           name: Setup Code Climate test-reporter
           command: |
@@ -26,7 +24,6 @@ jobs:
           name: Run test
           command: |
             ./cc-test-reporter before-build
-            npm run coverage
             ./cc-test-reporter after-build --coverage-input-type lcov --exit-code $?
 
   test:
