@@ -19,6 +19,7 @@ jobs:
           command: |
             npm install
             sudo apt install postgresql postgresql-contrib
+            sudo -u postgres psql -p 5432 -c "create user testuser with password 'nskumar143';"
             psql --version
       - run:
           name: Setup Code Climate test-reporter
