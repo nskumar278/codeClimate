@@ -18,6 +18,7 @@ jobs:
           name: Setup dependencies
           command: |
             npm install
+            psql --version
       - run:
           name: Setup Code Climate test-reporter
           command: |
@@ -28,6 +29,7 @@ jobs:
           name: Run test
           command: |
             ./cc-test-reporter before-build
+
             ./cc-test-reporter after-build --coverage-input-type lcov --exit-code $?
 
   test:
